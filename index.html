@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A 90-second interactive animation showing a microscopic cell responding to a signal.">
+  <title>Cell Signal — Interactive Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MICROBIOLOGY / 01</p>
+        <h1>Cell Signal</h1>
+      </div>
+      <div class="duration-pill" aria-label="Animation duration">90 seconds</div>
+    </header>
+
+    <section class="stage-card" aria-label="Cell Signal animation">
+      <div class="stage-wrap">
+        <canvas id="stage" width="1920" height="1080" aria-label="Animated microscopic cell illustration"></canvas>
+        <div class="scene-caption" aria-live="polite">
+          <p id="scene-kicker">A LIVING SYSTEM</p>
+          <h2 id="scene-title">A quiet world, in motion</h2>
+          <p id="scene-description">Watch a signal cross the membrane and guide the cell toward a new response.</p>
+        </div>
+        <div class="time-readout" aria-label="Playback time"><span id="current-time">0:00</span><span>/ 1:30</span></div>
+      </div>
+
+      <div class="transport" aria-label="Animation controls">
+        <button class="primary" id="play-animation" type="button">▶ <span>Play Animation</span></button>
+        <button class="control" id="pause" type="button" aria-label="Pause animation">Ⅱ</button>
+        <button class="control" id="restart" type="button" aria-label="Restart animation">↺</button>
+        <label class="range-label" for="timeline"><span class="sr-only">Animation progress</span><input id="timeline" type="range" min="0" max="90" step="0.01" value="0"></label>
+        <button class="download" id="download-mp4" type="button">⬇ <span>Download MP4</span></button>
+      </div>
+      <p class="export-note" id="export-note">1080p MP4 export • same 90-second timeline</p>
+    </section>
+
+    <footer><span>Canvas animation • no external media</span><span id="status">Ready to play</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

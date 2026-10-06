@@ -1,0 +1,10 @@
+{
+  "name": "cell-signal-animation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx serve .",
+    "render:mp4": "node scripts/render-mp4.mjs"
+  },
+  "devDependencies": { "playwright": "^1.48.2" }
+}
